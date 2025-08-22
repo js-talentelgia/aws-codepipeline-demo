@@ -14,4 +14,4 @@ if [ "$(docker ps -aq)" ]; then
     docker rm -f $(docker ps -aq) || true
 fi
 
-echo "✅ Cleanup complete"
+echo "✅ Cleanup complete..."
