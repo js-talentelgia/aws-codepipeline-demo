@@ -1,13 +1,17 @@
 #!/bin/bash
 set -e
 
-# 1. Remove all unused images
-docker image prune -a -f
+# 1. Remove all unused images (safe)
+docker image prune -a -f || true
 
-# 2. Stop all running containers
-docker stop $(docker ps -q)
+# 2. Stop all running containers (only if there are any)
+if [ "$(docker ps -q)" ]; then
+    docker stop $(docker ps -q) || true
+fi
 
-# 3. Remove all containers
-docker rm $(docker ps -aq)
+# 3. Remove all containers (only if there are any)
+if [ "$(docker ps -aq)" ]; then
+    docker rm -f $(docker ps -aq) || true
+fi
 
-echo "done"
+echo "✅ Cleanup complete"
