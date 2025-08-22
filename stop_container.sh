@@ -1,6 +1,6 @@
 #!/bin/bash
-set -e
-  docker compose down
+
+sudo su - root
 # 1. Remove all unused images (safe)
 docker image prune -a -f || true
 
