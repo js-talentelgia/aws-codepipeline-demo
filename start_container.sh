@@ -6,4 +6,4 @@ sudo su
 docker pull jagseersingh/codepipeline-demo
 
 # Run the Docker image as a container
-docker compose up -d
+docker run -d -p 5000:5000 jagseersingh/codepipeline-demo
