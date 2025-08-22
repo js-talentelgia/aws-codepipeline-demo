@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  codepipeline-demo:
+    image: jagseersingh/codepipeline-demo
+    container_name: codepipeline-demo
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
