@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+sudo su
 # Pull the Docker image from Docker Hub
 docker pull jagseersingh/codepipeline-demo
 
