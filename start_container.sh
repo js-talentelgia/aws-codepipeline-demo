@@ -9,6 +9,4 @@ docker ps -q --filter "ancestor=jagseersingh/codepipeline-demo" | xargs -r docke
 docker ps -aq --filter "ancestor=jagseersingh/codepipeline-demo" | xargs -r docker rm
 
 # Run the Docker image as a container
-#docker run -d -p 5000:5000 jagseersingh/codepipeline-demo
-
-docker compose up -d
+docker run -d -p 5000:5000 jagseersingh/codepipeline-demo
