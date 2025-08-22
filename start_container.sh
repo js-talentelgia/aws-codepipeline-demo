@@ -7,4 +7,4 @@ sudo su - root
 docker pull jagseersingh/codepipeline-demo
 
 # Run the Docker image as a container
-docker run -d -p 5000:5000 jagseersingh/codepipeline-demo
+docker run -d -p 4000:5000 jagseersingh/codepipeline-demo
